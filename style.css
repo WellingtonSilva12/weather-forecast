@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #43aff7;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
+
+.container {
+  width: 38rem;
+  background-color: azure;
+  box-shadow: 0 3px 8px rgba(00, 0, 0, 0.2);
+  padding: 2.5rem;
+  border-radius: 5px;
+  color: #1b1b1b;
+}
+
+.weather-icon {
+  height: 12rem;
+}
+
+.form h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #43aff7;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+.info-txt.show {
+  display: block;
+}
+
+.info-txt {
+  display: none;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 5px;
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  font-size: 1.6rem;
+  text-transform: lowercase;
+}
+
+.form-input-container {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.form input {
+  padding: 0.8rem;
+  border: 1px solid #dbdbdb;
+  flex: 1;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.8rem;
+  outline: none;
+}
+
+.form input::placeholder {
+  color: #bfbfbf;
+}
+
+.form input:focus {
+  /* box-shadow: 0 2px 6px #43aff7; */
+  border: 2px solid #43aff7;
+}
+
+.form button {
+  border-radius: 4px;
+  padding: 0.8rem;
+  border: none;
+  background-color: #43aff7;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.weather-data {
+  margin: 0 auto;
+  border-top: 2px solid #dbdbdb;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.weather-data h2 {
+  margin-bottom: 0.6rem;
+}
+
+.weather-data h2 i {
+  font-size: 1.8rem;
+}
+
+.weather-data .country {
+  height: 15px;
+}
+
+.description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 1rem 0;
+  text-transform: capitalize;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1.6rem;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+
+  color: #1b1b1b;
+}
+
+.details-container .humidity {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.humidity p,
+.wind p {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.details-container .wind {
+  flex: 1;
+  border-left: 1px solid #cacaca;
+  padding: 2rem 0;
+}
+.weather-city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.weather-city i {
+  font-size: 2.2rem;
+}
+.weather-city > span {
+  font-size: 2.1rem;
+  font-weight: 400;
+}

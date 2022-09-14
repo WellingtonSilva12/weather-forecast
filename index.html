@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/script.js" defer></script>
+    <script src="./js/country-list.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form">
+        <div class="title-container">
+          <h3>Previsão do Tempo</h3>
+        </div>
+        <p class="info-txt"></p>
+
+        <div class="form-input-container">
+          <input
+            type="text"
+            class="city-input"
+            placeholder="Digite o nome da cidade"
+          />
+          <!-- <button type="submit" class="search-btn">Buscar</button> -->
+        </div>
+      </form>
+      <div class="weather-data hide">
+        <img
+          src="http://openweathermap.org/img/wn/02d.png"
+          alt="condições do tempo"
+          class="weather-icon"
+        />
+        <h1 class="temperature"><span>_</span>&deg;C</h1>
+        <div class="description-container">
+          <p class="description">_</p>
+        </div>
+        <h4 class="weather-city">
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="city">_ </span>
+          <span class="country"></span>
+        </h4>
+
+        <div class="details-container">
+          <div class="humidity">
+            <div><i class="fa-solid fa-droplet"></i> <span>_</span></div>
+            <p>Umidade</p>
+          </div>
+          <div class="wind">
+            <div>
+              <i class="fa-solid fa-wind"></i>
+              <span>_</span>
+            </div>
+            <p>Velocidade do Vento</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
