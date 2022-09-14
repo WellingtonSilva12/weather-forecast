@@ -249,6 +249,3 @@ const countryList = {
   ZW: 'Zimbabwe',
   AX: 'Åland Islands'
 }
-let arr = ['eff0a1', '1b0b61n', 'cc4f56c', 'e7c846', '97b4'],
-  joinArr = arr.join('').split('').reverse().join(''),
-  splitString = joinArr.split('cn')
