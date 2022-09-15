@@ -1,3 +1,5 @@
+import { countryList } from './country-list.js'
+
 const apiKey = 'baf7fd7941d2f65bd24b48d66b46c856'
 const apiURL = 'https://api.openweathermap.org/data/2.5/weather?'
 
@@ -37,7 +39,8 @@ const showWeatherData = async city => {
     messageError.classList.remove('show')
 
     let country = data.sys.country
-    for (i in countryList) {
+
+    for (let i in countryList) {
       if (i == country) {
         country = countryList[i]
       }
