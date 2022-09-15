@@ -1,4 +1,5 @@
 import { countryList } from './country-list.js'
+import { elementApiWeather } from './element-weather.js'
 
 const apiKey = 'baf7fd7941d2f65bd24b48d66b46c856'
 const apiURL = 'https://api.openweathermap.org/data/2.5/weather?'
@@ -6,13 +7,13 @@ const apiURL = 'https://api.openweathermap.org/data/2.5/weather?'
 const cityInput = document.querySelector('.city-input')
 const formSubmit = document.querySelector('form')
 
-const cityElement = document.querySelector('.city')
-const tempElement = document.querySelector('.temperature span')
-const descElement = document.querySelector('.description')
-const weatherIconElement = document.querySelector('.weather-icon')
-const countryElement = document.querySelector('.country')
-const humidityElement = document.querySelector('.humidity span')
-const windElement = document.querySelector('.wind span')
+// const cityElement = document.querySelector('.city')
+// const tempElement = document.querySelector('.temperature span')
+// const descElement = document.querySelector('.description')
+// const weatherIconElement = document.querySelector('.weather-icon')
+// const countryElement = document.querySelector('.country')
+// const humidityElement = document.querySelector('.humidity span')
+// const windElement = document.querySelector('.wind span')
 
 const weatherContainer = document.querySelector('.weather-data')
 
@@ -50,24 +51,24 @@ const showWeatherData = async city => {
     const { id } = data.weather[0]
 
     if (id == 800) {
-      weatherIconElement.src = 'assets/icons/clear.svg'
+      elementApiWeather.weatherIconElement.src = 'assets/icons/clear.svg'
     } else if (id >= 200 && id <= 232) {
-      weatherIconElement.src = 'assets/icons/storm.svg'
+      elementApiWeather.weatherIconElement.src = 'assets/icons/storm.svg'
     } else if (id >= 600 && id <= 622) {
-      weatherIconElement.src = 'assets/icons/snow.svg'
+      elementApiWeather.weatherIconElement.src = 'assets/icons/snow.svg'
     } else if (id >= 701 && id <= 781) {
-      weatherIconElement.src = 'assets/icons/haze.svg'
+      elementApiWeather.weatherIconElement.src = 'assets/icons/haze.svg'
     } else if (id >= 801 && id <= 804) {
-      weatherIconElement.src = 'assets/icons/cloud.svg'
+      elementApiWeather.weatherIconElement.src = 'assets/icons/cloud.svg'
     } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
-      weatherIconElement.src = 'assets/icons/rain.svg'
+      elementApiWeather.weatherIconElement.src = 'assets/icons/rain.svg'
     }
 
-    cityElement.innerText = `${data.name}, ${country}`
-    tempElement.innerText = parseInt(data.main.temp)
-    descElement.innerText = data.weather[0].description
-    humidityElement.innerText = `${data.main.humidity}%`
-    windElement.innerText = `${data.wind.speed} km/h`
+    elementApiWeather.cityElement.innerText = `${data.name}, ${country}`
+    elementApiWeather.tempElement.innerText = parseInt(data.main.temp)
+    elementApiWeather.descElement.innerText = data.weather[0].description
+    elementApiWeather.humidityElement.innerText = `${data.main.humidity}%`
+    elementApiWeather.windElement.innerText = `${data.wind.speed} km/h`
 
     weatherContainer.classList.remove('hide')
   }
